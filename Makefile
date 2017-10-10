@@ -7,4 +7,7 @@ start:
 publish:
 	npm publish
 
+readline:
+	npm install readline-sync
+
 
