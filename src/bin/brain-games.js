@@ -2,4 +2,4 @@
 
 
 
-import index from '../index.js'
+import question from '../index.js';
