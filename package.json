@@ -1,0 +1,31 @@
+{
+  "name": "brain-games-03",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/bin/brain-games.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alekseyzh/project-lvl1-s132.git"
+  },
+  "author": "Aleksei Zhigzhitov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alekseyzh/project-lvl1-s132/issues"
+  },
+  "homepage": "https://github.com/Alekseyzh/project-lvl1-s132#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
