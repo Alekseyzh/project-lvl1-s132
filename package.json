@@ -23,10 +23,12 @@
   },
   "homepage": "https://github.com/Alekseyzh/project-lvl1-s132#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-0": "^6.24.1",
     "readline-sync": "^1.4.7"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
   }
 }
