@@ -1,6 +1,6 @@
 {
   "name": "brain-games-03",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Brain Games",
   "main": "",
   "bin": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
-    "babel-eslint": "*",
+    "babel-eslint": "^8.0.1",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
     "eslint": "^4.8.0",
