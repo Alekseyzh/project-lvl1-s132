@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-import { getName, Questions } from '..';
+import brainGames from '..';
 
-console.log('Welcome to the Brain Games!' + '\n' + 'Answer "yes" if number even otherwise answer "no".' + '\n');
-
-getName();
-
-Questions();
+brainGames();
