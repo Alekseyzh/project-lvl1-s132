@@ -1,21 +1,22 @@
 import readlineSync from 'readline-sync';
-
-const isEven = num => (num % 2 === 0 ? 'yes' : 'no');
+import { cdr, car } from 'hexlet-pairs';
 
 const numberAttempt = 3;
 
-const brainGames = () => {
+const brainGames = (rules, task) => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  console.log(`${rules}`);
   const nameUser = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${nameUser}! \n`);
   for (let i = 1; i <= numberAttempt; i += 1) {
-    const randomNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-    readlineSync.question(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Answer: ');
-    if (isEven(randomNumber) === answer) {
+    const taskValue = task();
+    const question = car(taskValue);
+    const answer = cdr(taskValue);
+    console.log(readlineSync.question(`Question: ${question}`));
+    const answerUser = readlineSync.question('Answer: ');
+    if (answer === answerUser) {
       console.log('Correct!');
-    } else { console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(randomNumber)}'. Let's try again, ${nameUser}!`); return; }
+    } else { console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${nameUser}!`); return; }
   }
   console.log(`Congratulations, ${nameUser}!`);
 };
