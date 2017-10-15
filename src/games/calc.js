@@ -5,8 +5,7 @@ import randomNumber from '../utils';
 const rules = 'What is the result of the expression?';
 
 const getRandomOperator = (a, b) => {
-  const randomOperator = randomNumber(4, 2);
-  const operatorCase = randomOperator;
+  const operatorCase = randomNumber(4, 2);
 
   const summation = a + b;
   const subtraction = a - b;
