@@ -6,10 +6,10 @@ const numberAttempt = 3;
 const brainGames = (rules, task) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${rules}`);
-  console.log('\n');
+  console.log('');
   const nameUser = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${nameUser}!`);
-  console.log('\n');
+  console.log('');
 
   function questionsCount(attemptCount) {
     if (attemptCount === numberAttempt) {
