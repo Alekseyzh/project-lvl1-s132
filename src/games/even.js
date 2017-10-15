@@ -1,4 +1,4 @@
-import cons from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs';
 import brainGames from '..';
 import randomNumber from '../utils';
 
