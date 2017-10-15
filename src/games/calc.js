@@ -5,14 +5,14 @@ import randomNumber from '../utils';
 const descriptionGame = 'What is the result of the expression?';
 
 const getRandomOperator = (a, b) => {
-  const operatorCase = randomNumber(4, 2);
+  const operatorCase = randomNumber(3);
 
   switch (operatorCase) {
-    case 2:
+    case 1:
       return cons('+', a + b);
-    case 3:
+    case 2:
       return cons('-', a - b);
-    case 4:
+    case 3:
       return cons('*', Math.floor(a * b));
     default:
       return cons('+', a + b);
