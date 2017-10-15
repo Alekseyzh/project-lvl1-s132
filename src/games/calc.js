@@ -9,13 +9,13 @@ const getRandomOperator = (a, b) => {
 
   switch (operatorCase) {
     case 1:
-      return cons('+', a + b);
+      return cons(`${a} + ${b}`, a + b);
     case 2:
-      return cons('-', a - b);
+      return cons(`${a} - ${b}`, a - b);
     case 3:
-      return cons('*', Math.floor(a * b));
+      return cons(`${a} * ${b}`, Math.floor(a * b));
     default:
-      return cons('+', a + b);
+      return cons(`${a} + ${b}`, a + b);
   }
 };
 
@@ -23,7 +23,7 @@ const task = () => {
   const firstOperand = randomNumber(30);
   const secondOperand = randomNumber(15);
   const operator = getRandomOperator(firstOperand, secondOperand);
-  const question = `${firstOperand} ${car(operator)} ${secondOperand}`;
+  const question = `${car(operator)}`;
   const answer = cdr(operator);
   const taskJob = cons(question, String(answer));
   return taskJob;
