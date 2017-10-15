@@ -11,7 +11,7 @@ const brainGames = (descriptionGame, task) => {
   console.log(`Hello, ${nameUser}!`);
   console.log('');
 
-  function questionsCount(attemptCount) {
+  const questionsCount = (attemptCount) => {
     if (attemptCount === numberAttempt) {
       return console.log(`Congratulations, ${nameUser}!`);
     }
@@ -29,7 +29,7 @@ const brainGames = (descriptionGame, task) => {
       return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'. Let's try again, ${nameUser}!`);
     }
     return questionsCount;
-  }
+  };
   return questionsCount(0);
 };
 
