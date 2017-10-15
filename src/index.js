@@ -3,7 +3,7 @@ import { car, cdr } from 'hexlet-pairs';
 
 const numberAttempt = 3;
 
-const questionsCount = (task, attemptCount) => {
+const questionsCount = (attemptCount, task) => {
   if (attemptCount === numberAttempt) {
     return true;
   }
@@ -16,9 +16,11 @@ const questionsCount = (task, attemptCount) => {
 
   if (answer === answerUser) {
     console.log('Correct!');
-    questionsCount(task, attemptCount + 1);
-  } else { console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.`); return false; }
-
+    questionsCount(attemptCount + 1, task);
+  } else {
+    console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.`);
+    return false;
+  }
   return questionsCount;
 };
 
@@ -30,8 +32,8 @@ const brainGames = (descriptionGame, task) => {
   console.log(`Hello, ${nameUser}!`);
   console.log('');
 
-  const isCorrect = questionsCount(task, 0);
-  if (isCorrect) {
+  const isCorrect = questionsCount(0, task);
+  if (Boolean(isCorrect) === true) {
     console.log(`Congratulations, ${nameUser}!`);
   } else {
     console.log(`Let's try again, ${nameUser}!`);
