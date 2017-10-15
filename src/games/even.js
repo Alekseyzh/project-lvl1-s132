@@ -4,9 +4,10 @@ import randomNumber from '../utils';
 
 const rules = 'Answer "yes" if number even otherwise answer "no".';
 
+const isEven = num => (num % 2 === 0 ? 'yes' : 'no');
+
 const task = () => {
   const question = randomNumber(100);
-  const isEven = num => (num % 2 === 0 ? 'yes' : 'no');
   const answer = isEven(question);
   const taskJob = cons(question, answer);
   return taskJob;
