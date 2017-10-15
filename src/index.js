@@ -6,6 +6,7 @@ const numberAttempt = 3;
 const brainGames = (rules, task) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${rules}`);
+  console.log('\n');
   const nameUser = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${nameUser}! \n`);
   for (let i = 1; i <= numberAttempt; i += 1) {
