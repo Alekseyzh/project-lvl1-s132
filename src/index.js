@@ -3,9 +3,9 @@ import { car, cdr } from 'hexlet-pairs';
 
 const numberAttempt = 3;
 
-const brainGames = (rules, task) => {
+const brainGames = (descriptionGame, task) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${rules}`);
+  console.log(`${descriptionGame}`);
   console.log('');
   const nameUser = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${nameUser}!`);

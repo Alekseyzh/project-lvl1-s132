@@ -2,7 +2,7 @@ import { cons, car, cdr } from 'hexlet-pairs';
 import brainGames from '..';
 import randomNumber from '../utils';
 
-const rules = 'What is the result of the expression?';
+const descriptionGame = 'What is the result of the expression?';
 
 const getRandomOperator = (a, b) => {
   const operatorCase = randomNumber(4, 2);
@@ -29,4 +29,4 @@ const task = () => {
   return taskJob;
 };
 
-export default () => brainGames(rules, task);
+export default () => brainGames(descriptionGame, task);
