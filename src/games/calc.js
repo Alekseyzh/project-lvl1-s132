@@ -7,23 +7,15 @@ const rules = 'What is the result of the expression?';
 const getRandomOperator = (a, b) => {
   const operatorCase = randomNumber(4, 2);
 
-  const summation = a + b;
-  const subtraction = a - b;
-  const multiplication = Math.floor(a * b);
-
-  const sum = cons('+', summation);
-  const subtract = cons('-', subtraction);
-  const multiple = cons('*', multiplication);
-
   switch (operatorCase) {
     case 2:
-      return sum;
+      return cons('+', a + b);
     case 3:
-      return subtract;
+      return cons('-', a - b);
     case 4:
-      return multiple;
+      return cons('*', Math.floor(a * b));
     default:
-      return sum;
+      return cons('+', a + b);
   }
 };
 
