@@ -8,7 +8,8 @@ const brainGames = (rules, task) => {
   console.log(`${rules}`);
   console.log('\n');
   const nameUser = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${nameUser}! \n`);
+  console.log(`Hello, ${nameUser}!`);
+  console.log('\n');
   for (let i = 1; i <= numberAttempt; i += 1) {
     const taskValue = task();
     const question = car(taskValue);
