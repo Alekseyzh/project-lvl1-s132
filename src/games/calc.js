@@ -1,12 +1,11 @@
 import { cons, car, cdr } from 'hexlet-pairs';
 import brainGames from '..';
+import randomNumber from '../utils';
 
 const rules = 'What is the result of the expression?\n';
 
-const randomNumber = maxNumber => Math.floor(Math.random() * ((maxNumber - 2) + 1)) + 2;
-
 const getRandomOperator = (a, b) => {
-  const randomOperator = randomNumber(4);
+  const randomOperator = randomNumber(4, 2);
   const operatorCase = randomOperator;
 
   const summation = a + b;

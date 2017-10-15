@@ -1,9 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import brainGames from '..';
+import randomNumber from '../utils';
 
 const rules = 'Find the greatest common divisor of given numbers.\n';
-
-const randomNumber = maxNumber => Math.floor(Math.random() * ((maxNumber - 2) + 1)) + 2;
 
 const gcdCalculate = (a, b) => {
   if (b === 0) {
@@ -13,8 +12,8 @@ const gcdCalculate = (a, b) => {
 };
 
 const task = () => {
-  const firstNumber = randomNumber(110);
-  const secondNumber = randomNumber(150);
+  const firstNumber = randomNumber(110, 2);
+  const secondNumber = randomNumber(150, 2);
   const gcd = gcdCalculate(firstNumber, secondNumber);
   const question = `${firstNumber} ${secondNumber}`;
   const answer = gcd;
