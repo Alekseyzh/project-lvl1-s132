@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import brainGames from '..';
 import randomNumber from '../utils';
 
-const rules = 'Answer "yes" if number even otherwise answer "no".\n';
+const rules = 'Answer "yes" if number even otherwise answer "no".';
 
 const task = () => {
   const question = randomNumber(100);

@@ -2,7 +2,7 @@ import { cons, car, cdr } from 'hexlet-pairs';
 import brainGames from '..';
 import randomNumber from '../utils';
 
-const rules = 'What is the result of the expression?\n';
+const rules = 'What is the result of the expression?';
 
 const getRandomOperator = (a, b) => {
   const randomOperator = randomNumber(4, 2);
